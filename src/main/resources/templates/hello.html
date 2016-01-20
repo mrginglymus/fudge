@@ -8,14 +8,10 @@
     </head>
     <body>
         <h1>Hiiiiii</h1>
-        <ol th:each="user : ${users}">
-            <li th:text="${user}" />
-        </ol>
+        <p>Hello logged in person</p>
         <dl th:each="user : ${users}">
-            <dt th:text="${user.email}" />
+            <dt th:text="${user.name}" />
             <dd th:text="${user.password}" />
         </dl>
-        <p th:text="${users}" />
-        <a th:href="@{hello/}">Secure Stuff</a>
     </body>
 </html>
